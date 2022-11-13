@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const SectionPricingWrapper = styled.section``;
+export const SectionPricingWrapper = styled.section`
+  position: relative;
+  z-index: 1;
+`;
 export const SectionPricingContent = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
