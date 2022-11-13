@@ -7,6 +7,7 @@ export const LinkElement = styled.a`
   font-weight: 500;
   border-radius: 30px;
   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  cursor: pointer;
 
   &.pricing-card {
     background: var(--color-light-grey-2);
