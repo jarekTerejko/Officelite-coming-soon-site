@@ -12,6 +12,12 @@ export const LinkElement = styled.a`
   &.pricing-card {
     background: var(--color-light-grey-2);
     color: var(--color-blue);
+
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      top: 164px;
+      left: 0;
+    }
   }
 
   &.pro {

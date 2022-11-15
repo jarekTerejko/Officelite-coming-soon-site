@@ -18,4 +18,10 @@ export const TextRegularElement = styled.p`
   &.pro {
     color: var(--color-white);
   }
+
+  @media screen and (max-width: 1140px) {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 23px;
+  }
 `;

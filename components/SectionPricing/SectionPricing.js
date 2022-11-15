@@ -6,6 +6,8 @@ import {
   SectionPricingBgPatternWrapper,
   SectionPricingCard,
   SectionPricingCardContent,
+  SectionPricingCardContentColLeft,
+  SectionPricingCardContentColRight,
   SectionPricingContent,
   SectionPricingPlanExplanation,
   SectionPricingPlanName,
@@ -64,29 +66,33 @@ const SectionPricing = () => {
                     ""
                   )}
                   <SectionPricingCardContent>
-                    <SectionPricingPlanName className={card.className}>
-                      {card.name}
-                    </SectionPricingPlanName>
-                    <HeadingPrimary className={card.className}>
-                      {card.price}
-                    </HeadingPrimary>
-                    <SectionPricingPlanExplanation className={card.className}>
-                      {card.explanation}
-                    </SectionPricingPlanExplanation>
-                    <TextRegularElement className={card.className}>
-                      {card.mainAdvantage}
-                    </TextRegularElement>
-                    <TextRegularElement className={card.className}>
-                      {card.storage}
-                    </TextRegularElement>
-                    <TextRegularElement className={card.className}>
-                      {card.additionalAdvantage}
-                    </TextRegularElement>
-                    <Link href="/signup">
-                      <LinkElement className={card.className}>
-                        Try for Free
-                      </LinkElement>
-                    </Link>
+                    <SectionPricingCardContentColLeft>
+                      <SectionPricingPlanName className={card.className}>
+                        {card.name}
+                      </SectionPricingPlanName>
+                      <HeadingPrimary className={card.className}>
+                        {card.price}
+                      </HeadingPrimary>
+                      <SectionPricingPlanExplanation className={card.className}>
+                        {card.explanation}
+                      </SectionPricingPlanExplanation>
+                    </SectionPricingCardContentColLeft>
+                    <SectionPricingCardContentColRight>
+                      <TextRegularElement className={card.className}>
+                        {card.mainAdvantage}
+                      </TextRegularElement>
+                      <TextRegularElement className={card.className}>
+                        {card.storage}
+                      </TextRegularElement>
+                      <TextRegularElement className={card.className}>
+                        {card.additionalAdvantage}
+                      </TextRegularElement>
+                      <Link href="/signup">
+                        <LinkElement className={card.className}>
+                          Try for Free
+                        </LinkElement>
+                      </Link>
+                    </SectionPricingCardContentColRight>
                   </SectionPricingCardContent>
                 </SectionPricingCard>
               );

@@ -18,6 +18,11 @@ export const CounterHeadingTimeStr = styled.span`
 export const CounterBoxesWrapper = styled.div`
   margin-top: 17px;
   display: flex;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 24px;
+    margin-bottom: 48px;
+  }
 `;
 
 export const CounterBox = styled.div`
@@ -30,6 +35,10 @@ export const CounterBox = styled.div`
   padding: 17px 0;
   border-radius: 14px;
   min-width: 100px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 `;
 
 export const CounterDigit = styled.h3`
@@ -37,6 +46,7 @@ export const CounterDigit = styled.h3`
   color: var(--color-dark-white);
   font-family: "Roboto Mono", monospace;
 `;
+
 export const CounterSpan = styled.span`
   font-size: 16px;
   font-weight: 500;
