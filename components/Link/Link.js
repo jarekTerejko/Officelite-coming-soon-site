@@ -18,6 +18,10 @@ export const LinkElement = styled.a`
       top: 164px;
       left: 0;
     }
+
+    @media screen and (max-width: 560px) {
+      position: unset;
+    }
   }
 
   &.pro {

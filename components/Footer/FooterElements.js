@@ -25,6 +25,10 @@ export const FooterBgPattern = styled.div`
     left: 0px;
     transform: scale(1.9);
   }
+  
+  @media screen and (max-width: 560px) {
+    top: 900px;
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -44,7 +48,8 @@ export const FooterContent = styled.div`
   @media screen and (max-width: 650px) {
   margin-top: 700px;
   }
+
   @media screen and (max-width: 560px) {
-  margin-top: 800px;
+  margin-top: 1000px;
   }
 `;

@@ -39,12 +39,22 @@ export const CounterBox = styled.div`
   &:last-of-type {
     margin-right: 0;
   }
+
+  @media screen and (max-width: 560px) {
+    margin-right: 10px;
+    min-width: 62px;
+    padding: 10px 0;
+  }
 `;
 
 export const CounterDigit = styled.h3`
   font-size: 54px;
   color: var(--color-dark-white);
   font-family: "Roboto Mono", monospace;
+
+  @media screen and (max-width: 560px) {
+    font-size: 36px;
+  }
 `;
 
 export const CounterSpan = styled.span`

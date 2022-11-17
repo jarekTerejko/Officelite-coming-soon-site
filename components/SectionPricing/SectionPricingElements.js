@@ -45,6 +45,11 @@ export const SectionPricingCardContent = styled.div`
     grid-template-columns: 1fr 1fr;
     text-align: left;
   }
+
+  @media screen and (max-width: 560px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 `;
 
 export const SectionPricingCardContentColLeft = styled.div``;
@@ -55,6 +60,10 @@ export const SectionPricingCardContentColRight = styled.div`
 
   @media screen and (max-width: 700px) {
     padding: 20px 0px 0px 20px;
+  }
+
+  @media screen and (max-width: 560px) {
+    padding: 0;
   }
 `;
 
@@ -68,6 +77,13 @@ export const SectionPricingBgPatternWrapper = styled.div`
     top: -280px;
     left: -320px;
     transform: scale(1);
+  }
+  
+  @media screen and (max-width: 560px) {
+    left: 50%;
+    top: -366px;
+    transform: translateX(-50%);
+    width: 880px;
   }
 `;
 

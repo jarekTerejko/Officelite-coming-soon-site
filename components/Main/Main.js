@@ -7,4 +7,8 @@ export const MainElement = styled.main`
   @media screen and (max-width: 768px) {
     max-height: 1205px;
   }
+
+  @media screen and (max-width: 560px) {
+    max-height: 1820px;
+  }
 `;

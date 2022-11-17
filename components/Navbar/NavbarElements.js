@@ -11,4 +11,8 @@ export const NavbarContent = styled.div`
   @media screen and (max-width: 1140px) {
     padding-top: 72px;
   }
+
+      @media screen and (max-width: 560px) {
+      text-align: center;
+      }
 `;
