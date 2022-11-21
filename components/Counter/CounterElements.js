@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const CounterWrapper = styled.div``;
+export const CounterWrapper = styled.div`
+  @media screen and (max-width: 375px) {
+    align-self: stretch;
+  }
+`;
 
 export const CounterHeading = styled.h2`
   color: var(--color-dark-white);
@@ -23,6 +27,19 @@ export const CounterBoxesWrapper = styled.div`
     margin-top: 24px;
     margin-bottom: 48px;
   }
+
+  @media screen and (max-width: 375px) {
+    margin-top: 34px;
+    margin-bottom: 39px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    gap: 16px;
+  }
+  
+  @media screen and (max-width: 330px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export const CounterBox = styled.div`
@@ -44,6 +61,13 @@ export const CounterBox = styled.div`
     margin-right: 10px;
     min-width: 62px;
     padding: 10px 0;
+  }
+
+  @media screen and (max-width: 375px) {
+    min-width: unset;
+    margin-right: 0;
+    padding-bottom: 14px;
+    border-radius: 4px;
   }
 `;
 
