@@ -13,6 +13,10 @@ export const SectionPricingContent = styled.div`
     grid-template-columns: 1fr;
     gap: 23px;
   }
+
+  @media screen and (max-width: 375px) {
+    gap: 32px;
+  }
 `;
 
 export const SectionPricingCard = styled.div`
@@ -33,6 +37,11 @@ export const SectionPricingCard = styled.div`
     min-height: unset;
     gap: 30px;
   }
+
+  @media screen and (max-width: 375px) {
+    padding-top: 38px;
+    padding-bottom: 43px;
+  }
 `;
 
 export const SectionPricingCardContent = styled.div`
@@ -50,6 +59,8 @@ export const SectionPricingCardContent = styled.div`
     grid-template-columns: 1fr;
     text-align: center;
   }
+
+  
 `;
 
 export const SectionPricingCardContentColLeft = styled.div``;
@@ -78,12 +89,16 @@ export const SectionPricingBgPatternWrapper = styled.div`
     left: -320px;
     transform: scale(1);
   }
-  
+
   @media screen and (max-width: 560px) {
     left: 50%;
     top: -366px;
     transform: translateX(-50%);
     width: 880px;
+  }
+
+  @media screen and (max-width: 375px) {
+    top: -379px;
   }
 `;
 
@@ -99,6 +114,10 @@ export const SectionPricingPlanName = styled.p`
 
   @media screen and (max-width: 768px) {
     margin-bottom: 22px;
+  }
+  
+  @media screen and (max-width: 375px) {
+    margin-bottom: 47px;
   }
 `;
 

@@ -11,4 +11,8 @@ export const MainElement = styled.main`
   @media screen and (max-width: 560px) {
     max-height: 1820px;
   }
+  
+  @media screen and (max-width: 375px) {
+    max-height: 1719px;
+  }
 `;

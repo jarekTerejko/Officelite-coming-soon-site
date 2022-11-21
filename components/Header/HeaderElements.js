@@ -25,6 +25,11 @@ export const HeaderBgPattern = styled.div`
     width: 560px;
     transform: translateX(-50%);
   }
+
+  @media screen and (max-width: 375px) {
+    top: -138px;
+    width: 466px;
+  }
 `;
 
 export const HeaderContent = styled.div`
@@ -35,11 +40,19 @@ export const HeaderContent = styled.div`
   @media screen and (max-width: 560px) {
     grid-template-columns: 1fr;
   }
+
+  @media screen and (max-width: 375px) {
+    padding-top: 170px;
+  }
 `;
 
 export const HeaderContentColLeft = styled.div`
   @media screen and (max-width: 560px) {
     text-align: center;
+  }
+
+  @media screen and (max-width: 375px) {
+    margin-top: 30px;
   }
 `;
 
@@ -62,5 +75,9 @@ export const HeaderContentColRight = styled.div`
     transform: translate(0);
     text-align: center;
     margin: 22px auto 0;
+  }
+
+  @media screen and (max-width: 375px) {
+    max-width: 188px;
   }
 `;

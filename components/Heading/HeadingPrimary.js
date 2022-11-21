@@ -15,6 +15,10 @@ export const HeadingPrimary = styled.h1`
       font-size: 56px;
       margin-bottom: 21px;
     }
+    
+    @media screen and (max-width: 330px) {
+      font-size: 40px;
+    }
   }
 
   &.pro {
