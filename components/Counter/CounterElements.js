@@ -13,6 +13,10 @@ export const CounterHeading = styled.h2`
   letter-spacing: 4px;
   font-weight: 500;
   word-spacing: 3px;
+
+  &.counter-signup {
+    color: var(--color-dark);
+  }
 `;
 
 export const CounterHeadingTimeStr = styled.span`
@@ -36,7 +40,7 @@ export const CounterBoxesWrapper = styled.div`
     width: 100%;
     gap: 16px;
   }
-  
+
   @media screen and (max-width: 330px) {
     grid-template-columns: 1fr 1fr;
   }
@@ -52,6 +56,10 @@ export const CounterBox = styled.div`
   padding: 17px 0;
   border-radius: 14px;
   min-width: 100px;
+
+  &.counter-signup {
+    background: var(--color-light-grey-2);
+  }
 
   &:last-of-type {
     margin-right: 0;
@@ -75,6 +83,10 @@ export const CounterDigit = styled.h3`
   font-size: 54px;
   color: var(--color-dark-white);
   font-family: "Roboto Mono", monospace;
+
+  &.counter-signup {
+    color: var(--color-blue);
+  }
 
   @media screen and (max-width: 560px) {
     font-size: 36px;
