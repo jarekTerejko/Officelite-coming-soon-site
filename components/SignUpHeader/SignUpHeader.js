@@ -13,7 +13,7 @@ import {
 import { TextRegularElement } from "../Text/TextRegular";
 import CountdownTimer from "../CountdownTimer/CountdownTimer";
 import BgPatternSignUp from "../../public/assets/sign-up/bg-pattern-side.svg";
-import Form from "../Container/Form/Form";
+import Form from "../Form/Form";
 
 const SignUpHeader = () => {
   return (

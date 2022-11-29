@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { LinkElement } from "../../Link/Link";
+import { LinkElement } from "../Link/Link";
 
 export const ContactFormEl = styled.form`
   max-width: 446px;

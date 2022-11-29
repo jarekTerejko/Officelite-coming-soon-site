@@ -8,9 +8,9 @@ import {
   ContactFormBtn,
   ContactFormErrorMsg,
 } from "./FormElements";
-import IconArrowDown from "../../../public/assets/sign-up/icon-arrow-down.svg";
-import IconCross from "../../../public/assets/sign-up/icon-cross.svg";
-import IconCheck from "../../../public/assets/sign-up/icon-check.svg";
+import IconArrowDown from "../../public/assets/sign-up/icon-arrow-down.svg";
+import IconCross from "../../public/assets/sign-up/icon-cross.svg";
+import IconCheck from "../../public/assets/sign-up/icon-check.svg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useRouter } from "next/router";
@@ -43,7 +43,7 @@ const Form = () => {
     }),
     onSubmit: (values) => {
       console.log(values);
-      router.push({ pathname: "/success", query: values });
+      router.push({ pathname: "/success", query: values});
     },
   });
 
