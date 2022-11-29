@@ -13,6 +13,7 @@ import {
 import { TextRegularElement } from "../Text/TextRegular";
 import CountdownTimer from "../CountdownTimer/CountdownTimer";
 import BgPatternSignUp from "../../public/assets/sign-up/bg-pattern-side.svg";
+import Form from "../Container/Form/Form";
 
 const SignUpHeader = () => {
   return (
@@ -33,7 +34,9 @@ const SignUpHeader = () => {
             </TextRegularElement>
             <CountdownTimer />
           </SignUpHeaderContentColLeft>
-          <SignUpHeaderContentColRight></SignUpHeaderContentColRight>
+          <SignUpHeaderContentColRight>
+            <Form />
+          </SignUpHeaderContentColRight>
         </SignUpHeaderContent>
       </ContainerElement>
     </SignUpHeaderWrapper>

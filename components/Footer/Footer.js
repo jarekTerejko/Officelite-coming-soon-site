@@ -10,7 +10,6 @@ import {
   FooterContent,
   FooterWrapper,
 } from "./FooterElements";
-import {} from "../../public/data";
 import { LinkElement } from "../Link/Link";
 
 const Footer = () => {
