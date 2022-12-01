@@ -21,11 +21,18 @@ const Form = () => {
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
+  const selectOptions = [
+    { optionName: "Choose Pack", optionValue: "" },
+    { optionName: "Basic Pack Free", optionValue: "Basic Pack Free" },
+    { optionName: "Pro Pack $9.99", optionValue: "Pro Pack $9.99" },
+    { optionName: "Ultimate Pack $19.99", optionValue: "Ultimate Pack $19.99" },
+  ];
+
   const formik = useFormik({
     initialValues: {
       name: "",
       email: "",
-      pack: "Basic Pack Free",
+      pack: "",
       phoneNumber: "",
       company: "",
     },
@@ -36,6 +43,7 @@ const Form = () => {
       email: Yup.string()
         .email("Invalid email address")
         .required("Email is required"),
+      pack: Yup.string().required("Pack is required"),
       phoneNumber: Yup.string()
         .matches(phoneRegExp, "Phone number is not valid")
         .required("Phone Number is required"),
@@ -43,7 +51,7 @@ const Form = () => {
     }),
     onSubmit: (values) => {
       console.log(values);
-      router.push({ pathname: "/success", query: values});
+      router.push({ pathname: "/success", query: values });
     },
   });
 
@@ -89,17 +97,22 @@ const Form = () => {
       </ContactFormRow>
       <ContactFormRow>
         <ContactFormLabel htmlFor="pack"></ContactFormLabel>
+        <img src={IconArrowDown.src} className="icon-arrow-down" alt="" />
         <ContactFormSelect
-          iconArrowDown={IconArrowDown}
-          style={{ backgroundImage: `url(${IconArrowDown.src})` }}
           name="pack"
           value={formik.values.pack}
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
         >
-          <option>Basic Pack Free</option>
-          <option>Pro Pack $9.99</option>
-          <option>Ultimate Pack $19.99</option>
+          {selectOptions.map((option) => {
+            return (
+              <option value={option.optionValue}>{option.optionName}</option>
+            );
+          })}
         </ContactFormSelect>
+        {formik.touched.pack && formik.errors.pack ? (
+          <ContactFormErrorMsg>{formik.errors.pack}</ContactFormErrorMsg>
+        ) : null}
       </ContactFormRow>
       <ContactFormRow>
         <ContactFormLabel htmlFor="firstName">Phone Number</ContactFormLabel>
