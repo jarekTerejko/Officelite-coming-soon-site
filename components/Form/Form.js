@@ -67,10 +67,10 @@ const Form = () => {
           onBlur={formik.handleBlur}
         />
         {formik.touched.name && formik.errors.name ? (
-          <img src={IconCross.src} className="cross-icon" />
+          <img src={IconCross.src} className="cross-icon" alt="error-icon" />
         ) : null}
         {formik.touched.name && !formik.errors.name ? (
-          <img src={IconCheck.src} className="check-icon" />
+          <img src={IconCheck.src} className="check-icon" alt="check icon" />
         ) : null}
         {formik.touched.name && formik.errors.name ? (
           <ContactFormErrorMsg>{formik.errors.name}</ContactFormErrorMsg>
@@ -86,10 +86,10 @@ const Form = () => {
           onBlur={formik.handleBlur}
         />
         {formik.touched.email && formik.errors.email ? (
-          <img src={IconCross.src} className="cross-icon" />
+          <img src={IconCross.src} className="cross-icon" alt="error-icon" />
         ) : null}
         {formik.touched.email && !formik.errors.email ? (
-          <img src={IconCheck.src} className="check-icon" />
+          <img src={IconCheck.src} className="check-icon" alt="check icon" />
         ) : null}
         {formik.touched.email && formik.errors.email ? (
           <ContactFormErrorMsg>{formik.errors.email}</ContactFormErrorMsg>
@@ -104,9 +104,11 @@ const Form = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         >
-          {selectOptions.map((option) => {
+          {selectOptions.map((option, i) => {
             return (
-              <option value={option.optionValue}>{option.optionName}</option>
+              <option key={i} value={option.optionValue}>
+                {option.optionName}
+              </option>
             );
           })}
         </ContactFormSelect>
@@ -124,10 +126,10 @@ const Form = () => {
           onBlur={formik.handleBlur}
         />
         {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
-          <img src={IconCross.src} className="cross-icon" />
+          <img src={IconCross.src} className="cross-icon" alt="error-icon" />
         ) : null}
         {formik.touched.phoneNumber && !formik.errors.phoneNumber ? (
-          <img src={IconCheck.src} className="check-icon" />
+          <img src={IconCheck.src} className="check-icon" alt="check icon" />
         ) : null}
         {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
           <ContactFormErrorMsg>{formik.errors.phoneNumber}</ContactFormErrorMsg>
@@ -143,10 +145,10 @@ const Form = () => {
           onBlur={formik.handleBlur}
         />
         {formik.touched.company && formik.errors.company ? (
-          <img src={IconCross.src} className="cross-icon" />
+          <img src={IconCross.src} className="cross-icon" alt="error-icon" />
         ) : null}
         {formik.touched.company && !formik.errors.company ? (
-          <img src={IconCheck.src} className="check-icon" />
+          <img src={IconCheck.src} className="check-icon" alt="check icon" />
         ) : null}
         {formik.touched.company && formik.errors.company ? (
           <ContactFormErrorMsg>{formik.errors.company}</ContactFormErrorMsg>
