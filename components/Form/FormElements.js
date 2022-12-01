@@ -10,6 +10,11 @@ export const ContactFormEl = styled.form`
   margin-top: 44px;
   padding: 42px 44px;
   min-height: 508px;
+
+  @media screen and (max-width: 950px) {
+    margin: 0 auto;
+    margin-top: 100px;
+  }
 `;
 
 export const ContactFormRow = styled.div`
@@ -54,8 +59,6 @@ export const ContactFormSelect = styled.select`
   outline: none;
   appearance: none;
   font-weight: 700;
-  background-repeat: no-repeat;
-  background-position: 324px 8px;
 
   &:focus {
     border-color: var(--color-blue);

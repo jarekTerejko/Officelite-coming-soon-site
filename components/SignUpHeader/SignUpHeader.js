@@ -18,11 +18,6 @@ import Form from "../Form/Form";
 const SignUpHeader = () => {
   return (
     <SignUpHeaderWrapper>
-      <SignUpHeaderPatternWrapper>
-        <SignUpHeaderPattern>
-          <Image src={BgPatternSignUp} />
-        </SignUpHeaderPattern>
-      </SignUpHeaderPatternWrapper>
       <ContainerElement>
         <SignUpHeaderContent>
           <SignUpHeaderContentColLeft>
@@ -39,6 +34,11 @@ const SignUpHeader = () => {
           </SignUpHeaderContentColRight>
         </SignUpHeaderContent>
       </ContainerElement>
+      <SignUpHeaderPatternWrapper>
+        <SignUpHeaderPattern>
+          <Image src={BgPatternSignUp} />
+        </SignUpHeaderPattern>
+      </SignUpHeaderPatternWrapper>
     </SignUpHeaderWrapper>
   );
 };

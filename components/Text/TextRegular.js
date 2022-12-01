@@ -21,6 +21,10 @@ export const TextRegularElement = styled.p`
 
   &.counter-signup {
     margin-bottom: 57px;
+
+    @media screen and (max-width: 950px) {
+      max-width: 570px;
+    }
   }
 
   @media screen and (max-width: 1140px) {
