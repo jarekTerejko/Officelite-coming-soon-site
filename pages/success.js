@@ -1,13 +1,31 @@
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ContainerElement } from "../components/Container/Container";
 import { HeadingPrimary } from "../components/Heading/HeadingPrimary";
 import { SignUpHeaderWrapper } from "../components/SignUpHeader/SignUpHeaderElements";
 import { TextRegularElement } from "../components/Text/TextRegular";
 import { motion } from "framer-motion";
+import Confetti from "react-confetti";
 
 const Success = () => {
   const router = useRouter();
+
+  const [pieces, setPieces] = useState(300);
+
+  const stopConfetti = () => {
+    setTimeout(() => {
+      setPieces(0);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    stopConfetti();
+
+    // return () => {
+    //   second
+    // }
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -26,6 +44,7 @@ const Success = () => {
           </TextRegularElement>
         </ContainerElement>
       </SignUpHeaderWrapper>
+      <Confetti gravity={0.2} numberOfPieces={pieces} />
     </motion.div>
   );
 };
