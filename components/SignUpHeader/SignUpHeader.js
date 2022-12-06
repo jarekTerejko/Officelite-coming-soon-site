@@ -27,7 +27,7 @@ const SignUpHeader = () => {
               perks available only to early subscribers. We are moving into
               final development and getting ready for official launch soon.
             </TextRegularElement>
-            <CountdownTimer />
+            <CountdownTimer counterClassName="counter-signup" />
           </SignUpHeaderContentColLeft>
           <SignUpHeaderContentColRight>
             <Form />

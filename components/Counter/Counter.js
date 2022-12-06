@@ -1,5 +1,4 @@
 import React from "react";
-import { useRouter } from "next/router";
 import {
   CounterBox,
   CounterBoxesWrapper,
@@ -10,58 +9,45 @@ import {
   CounterWrapper,
 } from "./CounterElements";
 
-const Counter = ({ days, hours, minutes, seconds, timeStr }) => {
+const Counter = ({
+  days,
+  hours,
+  minutes,
+  seconds,
+  timeStr,
+  counterClassName,
+}) => {
   const leadingZero = (x) => {
     return x < 10 ? `0${x}` : x;
   };
 
-  const router = useRouter();
-
   return (
     <>
       <CounterWrapper>
-        <CounterHeading
-          className={router.pathname === "/" ? "" : "counter-signup"}
-        >
+        <CounterHeading className={counterClassName}>
           coming <CounterHeadingTimeStr>{timeStr}</CounterHeadingTimeStr>
         </CounterHeading>
         <CounterBoxesWrapper>
-          <CounterBox
-            className={router.pathname === "/" ? "" : "counter-signup"}
-          >
-            <CounterDigit
-              className={router.pathname === "/" ? "" : "counter-signup"}
-            >
+          <CounterBox className={counterClassName}>
+            <CounterDigit className={counterClassName}>
               {leadingZero(days)}
             </CounterDigit>
             <CounterSpan>days</CounterSpan>
           </CounterBox>
-          <CounterBox
-            className={router.pathname === "/" ? "" : "counter-signup"}
-          >
-            <CounterDigit
-              className={router.pathname === "/" ? "" : "counter-signup"}
-            >
+          <CounterBox className={counterClassName}>
+            <CounterDigit className={counterClassName}>
               {leadingZero(hours)}
             </CounterDigit>
             <CounterSpan>hours</CounterSpan>
           </CounterBox>
-          <CounterBox
-            className={router.pathname === "/" ? "" : "counter-signup"}
-          >
-            <CounterDigit
-              className={router.pathname === "/" ? "" : "counter-signup"}
-            >
+          <CounterBox className={counterClassName}>
+            <CounterDigit className={counterClassName}>
               {leadingZero(minutes)}
             </CounterDigit>
             <CounterSpan>min</CounterSpan>
           </CounterBox>
-          <CounterBox
-            className={router.pathname === "/" ? "" : "counter-signup"}
-          >
-            <CounterDigit
-              className={router.pathname === "/" ? "" : "counter-signup"}
-            >
+          <CounterBox className={counterClassName}>
+            <CounterDigit className={counterClassName}>
               {leadingZero(seconds)}
             </CounterDigit>
             <CounterSpan>sec</CounterSpan>
